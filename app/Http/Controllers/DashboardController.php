@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -14,5 +15,10 @@ class DashboardController extends Controller {
         $pendingTasks = Task::where('status', 'pending')->count();
 
         return view('dashboard', compact('tasks', 'totalTasks', 'completedTasks', 'pendingTasks'));
+    }
+
+    public function create() {
+        $categories = Category::all();
+        return view('tasks.create', compact('categories'));
     }
 }

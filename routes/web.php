@@ -12,3 +12,5 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/tasks/create', [DashboardController::class, 'create']);
 
 Route::post('/tasks', [DashboardController::class, 'store']);
+
+

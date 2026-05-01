@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/tasks/create', [DashboardController::class, 'create']);
+Route::get('/tasks/create', [DashboardController::class, 'create'])->name('create');
 
 Route::post('/tasks', [DashboardController::class, 'store']);
 

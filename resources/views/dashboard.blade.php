@@ -34,6 +34,21 @@
                 </div>
             </div>
 
+            <div class="mb-4">
+                <a 
+                    href="{{ route('create') }}" 
+                    class="text-black font-bold bg-amber-500 hover:bg-amber-600 rounded-lg p-2 mb-2"
+                >
+                Add New Task
+                </a>
+            </div>
+
+            @if (session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <div class="bg-white rounded-xl shadow-sm overflow-hidden">
                 <table class="w-full text-left">
                     <thead class="bg-gray-100 border-b">

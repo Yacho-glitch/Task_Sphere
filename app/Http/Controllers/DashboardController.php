@@ -19,7 +19,7 @@ class DashboardController extends Controller {
 
     public function create() {
         $categories = Category::all();
-        return view('tasks.create', compact('categories'));
+        return view('create', compact('categories'));
     }
 
     public function store(Request $request) {
@@ -27,7 +27,7 @@ class DashboardController extends Controller {
             'title' => 'required|string|min:5',
             'description' => 'required|string',
             'status' => 'required',
-            'category_id' => 'required|exists:categories, id'   
+            'category_id' => 'required|exists:categories,id'   
         ]);
 
         Task::create($data);

@@ -74,6 +74,7 @@
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">
+                                    <a href="{{ route('tasks.edit', $task->id) }}" class="text-green-600 hover:text-green-900">Update</a>
                                     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
                                         @csrf
                                         @method('DELETE')

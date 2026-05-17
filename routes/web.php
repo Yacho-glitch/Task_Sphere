@@ -13,4 +13,8 @@ Route::get('/tasks/create', [DashboardController::class, 'create'])->name('creat
 
 Route::post('/tasks', [DashboardController::class, 'store']);
 
+Route::get('/tasks/{task}/edit', [DashboardController::class, 'edit'])->name('tasks.edit');
+
+Route::put('/dashboard', [DashboardController::class, 'DashboardController@update'])->name('tasks.update');
+
 Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');

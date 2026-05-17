@@ -35,6 +35,17 @@ class DashboardController extends Controller {
         return redirect('/dashboard')->with('success', 'Task created successfully');
     }
 
+    public function edit(Task $task) {
+        
+        return view('edit', compact('task'));
+    }
+
+    public function update(Request $request, Task $task) {
+        $task->update($request->all());
+
+        return redirect()->route('dashboard');
+    }
+
     public function destroy(Task $task) {
         // $taskElement = Task::findOrFail($task);
         $task->delete();

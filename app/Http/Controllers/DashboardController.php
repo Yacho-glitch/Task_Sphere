@@ -42,6 +42,13 @@ class DashboardController extends Controller {
     }
 
     public function update(Request $request, Task $task) {
+        $request->validate([
+            'title' => 'required|string|min:5',
+            'description' => 'required|string',
+            'status' => 'required',
+            'category_id' => 'required|exists:categories, id'
+        ]);
+
         $task->update($request->all());
 
         return redirect()->route('dashboard');

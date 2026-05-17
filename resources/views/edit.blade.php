@@ -84,7 +84,7 @@
             </div>
 
 
-            {{-- <div class="relative z-0 w-full mb-5 group">
+            <div class="relative z-0 w-full mb-5 group">
                 <label class="block text-gray-700 font-bold mb-2">
                     Status
                 </label>
@@ -92,13 +92,13 @@
                     name="status" 
                     class="w-full border rounded-lg p-2"
                 >
-                    <option value="pending">Pending</option>
-                    <option value="completed">Completed</option>
+                    <option value="pending" {{ $task->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                    <option value="completed" {{ $task->status == 'completed' ? 'selected' : '' }}>Completed</option>
                 </select>
                 @error('status')
                     <p class="text-red-500 font-bold mb-2">{{ $message }}</p>
                 @enderror    
-            </div> --}}
+            </div>
 
             <button 
                 type="submit"

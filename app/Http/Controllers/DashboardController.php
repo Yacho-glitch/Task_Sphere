@@ -46,7 +46,7 @@ class DashboardController extends Controller {
             'title' => 'required|string|min:5',
             'description' => 'required|string',
             'status' => 'required',
-            'category_id' => 'required|exists:categories, id'
+            'category_id' => 'required|exists:categories,id'
         ]);
 
         $task->update($request->all());

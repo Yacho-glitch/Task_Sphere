@@ -65,7 +65,7 @@
                                 <td class="px-6 py-4 text-slate-700">{{ $task->title }}</td>
                                 <td class="px-6 py-4">
                                     <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase">
-                                        {{ $task->category->name }}
+                                        {{ $task->category?->name }}
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">
@@ -73,12 +73,12 @@
                                         {{ $task->status }}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4">
-                                    <a href="{{ route('tasks.edit', $task->id) }}" class="text-green-600 hover:text-green-900">Update</a>
+                                <td class="px-6 py-4 flex items-center gap-4">
+                                    <a href="{{ route('tasks.edit', $task->id) }}" class="text-green-600 hover:text-green-900 font-semibold">Update</a>
                                     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-red-600 hover:text-red-900">
+                                        <button type="submit" class="text-red-600 hover:text-red-900 font-semibold">
                                             Delete
                                         </button>
                                     </form>

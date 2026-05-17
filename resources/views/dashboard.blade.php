@@ -56,6 +56,7 @@
                             <th class="px-6 py-6 font-bold text-gray-700">Task Title</th>
                             <th class="px-6 py-6 font-bold text-gray-700">Category</th>
                             <th class="px-6 py-6 font-bold text-gray-700">Status</th>
+                            <th class="px-6 py-6 font-bold text-gray-700">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

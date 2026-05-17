@@ -12,6 +12,7 @@
 <body>
     <div class="mt-12">
         <h2 class="text-center font-bold bg-blue-300 rounded-lg p-2 mb-2">Create new task</h2>
+        <a class="text-center font-bold w-2 rounded-lg p-2 bg-amber-600" href="{{ route('dashboard') }}">return to dashboard</a>
         <form
             action="/tasks"
             method="POST" 

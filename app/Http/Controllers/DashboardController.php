@@ -34,4 +34,11 @@ class DashboardController extends Controller {
 
         return redirect('/dashboard')->with('success', 'Task created successfully');
     }
+
+    public function destroy(Task $task) {
+        // $taskElement = Task::findOrFail($task);
+        $task->delete();
+
+        return redirect()->route('dashboard')->with('success', 'Task deleted successfully');
+    }
 }

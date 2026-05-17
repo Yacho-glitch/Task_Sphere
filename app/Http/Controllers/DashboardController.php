@@ -36,8 +36,9 @@ class DashboardController extends Controller {
     }
 
     public function edit(Task $task) {
+        $categories = Category::all();
         
-        return view('edit', compact('task'));
+        return view('edit', compact('task', 'categories'));
     }
 
     public function update(Request $request, Task $task) {

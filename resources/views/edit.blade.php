@@ -14,11 +14,12 @@
         <h2 class="text-center font-bold bg-blue-300 rounded-lg p-2 mb-2">Create new task</h2>
         <a class="text-center font-bold w-2 rounded-lg p-2 bg-amber-600" href="{{ route('dashboard') }}">return to dashboard</a>
         <form
-            action="/tasks"
+            action="{{ route('tasks.update', $task->id) }}"
             method="POST" 
             class="max-w-md mx-auto"
         >
             @csrf
+            @method('PUT')
             <input 
                 type="hidden" 
                 value="{{ $task->id }}"

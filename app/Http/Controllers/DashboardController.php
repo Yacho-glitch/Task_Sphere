@@ -55,7 +55,7 @@ class DashboardController extends Controller {
     }
 
     public function destroy(Task $task) {
-        // $taskElement = Task::findOrFail($task);
+        // $taskElement = Task::findOrFail($task); // we have to methods
         $task->delete();
 
         return redirect()->route('dashboard')->with('success', 'Task deleted successfully');

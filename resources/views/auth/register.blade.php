@@ -34,9 +34,31 @@
                         type="email" 
                         name="email" 
                         value="{{ old('email') }}"
-                        class="w-full border @error('email') @enderror"
+                        class="w-full border @error('email') border-red-500 @else border-gray-300 @enderror rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="you@example.com"
                     >
+                </div>
+
+                {{-- Password Input --}}
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-1 text-sm">Password</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        class="w-full border @error('password') border-red-500 @else border-gray-300 @enderror rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="........"
+                    />
+                </div>
+
+                {{-- Password Confirmation Input --}}
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-1 text-sm">Confirmation Password</label>
+                    <input 
+                        type="password"
+                        name="password_confirmation"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="........"
+                    />
                 </div>
 
                 <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg transition duration-200 shadow-sm">

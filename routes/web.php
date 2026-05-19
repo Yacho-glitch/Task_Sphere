@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +20,7 @@ Route::get('/tasks/{task}/edit', [DashboardController::class, 'edit'])->name('ta
 Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks.update');
 
 Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');
+
+Route::get('/register', [RegisterController::class])->name('register');
+
+Route::get('/login', [LoginController::class])->name('login');

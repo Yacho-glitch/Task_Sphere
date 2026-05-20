@@ -21,6 +21,8 @@ Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks
 
 Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');
 
-Route::get('/register', [RegisterController::class])->name('register');
+Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
 
-Route::get('/login', [LoginController::class])->name('login');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::get('/login', [LoginController::class, 'showLogin'])->name('login');

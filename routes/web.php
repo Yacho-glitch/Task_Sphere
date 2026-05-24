@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/tasks/create', [DashboardController::class, 'create'])->name('create');

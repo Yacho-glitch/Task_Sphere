@@ -15,6 +15,11 @@
                 </div>
             @endif
 
+            <form action="{{ route('login.authenticate') }}">
+                <div>
+                    <label for="" class="text-gray-700"></label>
+                </div>
+            </form>
 
         </div>
     </div>

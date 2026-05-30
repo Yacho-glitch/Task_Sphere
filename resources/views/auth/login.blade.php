@@ -15,9 +15,11 @@
                 </div>
             @endif
 
-            <form action="{{ route('login.authenticate') }}">
+            <form action="{{ route('login.authenticate') }}" method="POST" class="space-y-4">
+                @csrf
+                
                 <div>
-                    <label for="" class="text-gray-700"></label>
+                    <label class="block text-gray-700 font-semibold mb-1 text-sm">Email Address</label>
                 </div>
             </form>
 

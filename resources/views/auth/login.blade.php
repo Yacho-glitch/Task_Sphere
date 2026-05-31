@@ -20,6 +20,13 @@
                 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-1 text-sm">Email Address</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        value="{{ old('email') }}"
+                        class="w-full border @error('email') border-red-500 @else border-gray-300 @enderror rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="you@example.com" 
+                    >
                 </div>
             </form>
 

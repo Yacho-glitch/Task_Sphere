@@ -27,6 +27,9 @@
                         class="w-full border @error('email') border-red-500 @else border-gray-300 @enderror rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="you@example.com" 
                     >
+                    @error('password')
+                        <p class="text-red-500 text-xs mt-1 font-semibold">{{ $message }}</p>
+                    @enderror
                 </div>
             </form>
 

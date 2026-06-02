@@ -31,6 +31,10 @@
                         <p class="text-red-500 text-xs mt-1 font-semibold">{{ $message }}</p>
                     @enderror
                 </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-1 text-sm">Password</label>
+                </div>
             </form>
 
         </div>

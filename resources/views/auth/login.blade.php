@@ -48,6 +48,13 @@
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg transition duration-200 shadow-sm">
                     Log In
                 </button>
+
+                <p class="text-sm text-center text-gray-600 mt-4">
+                    Don't have an account?
+                    <a href="{{ route('register') }}" class="text-blue-600 hover:underline font-semibold">
+                        Sign Up
+                    </a>
+                </p>
             </form>
 
         </div>

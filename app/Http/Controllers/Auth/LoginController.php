@@ -23,5 +23,7 @@ class LoginController extends Controller
 
             return redirect()->route('dashboard')->with('sucess', 'Logged in successfully');
         }
+
+        return back()->with('error', 'The provider credentials do not match our records.')->withInput($request->only('email'));
     }
 }

@@ -30,3 +30,5 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 
 Route::post('/login', [LoginController::class, 'authentication'])->name('login.authentication');
+
+Route::post('/logout');

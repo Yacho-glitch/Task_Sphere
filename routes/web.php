@@ -9,6 +9,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'authentication'])->name('login.authentication');
+
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -23,12 +29,8 @@ Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks
 
 Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');
 
-Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
 
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 
-Route::post('/login', [LoginController::class, 'authentication'])->name('login.authentication');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

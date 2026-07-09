@@ -21,12 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tasks/create', [DashboardController::class, 'create'])->name('create');
     Route::post('/tasks', [DashboardController::class, 'store']);
     Route::get('/tasks/{task}/edit', [DashboardController::class, 'edit'])->name('tasks.edit');
+    Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks.update');
     
 });
 
 
 
-Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks.update');
 
 
 Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');

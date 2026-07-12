@@ -22,8 +22,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/tasks', [DashboardController::class, 'store']);
     Route::get('/tasks/{task}/edit', [DashboardController::class, 'edit'])->name('tasks.edit');
     Route::put('/tasks/{task}', [DashboardController::class, 'update'])->name('tasks.update');
-    Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');
     
+    Route::delete('/tasks/{task}', [DashboardController::class, 'destroy'])->name('tasks.destroy');
 });
 
 

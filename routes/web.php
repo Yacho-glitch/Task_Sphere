@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-
-
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
 
